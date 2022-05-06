@@ -2,16 +2,17 @@
 
 .spinner {
   position: fixed;
-  border: 16px solid #e5e5e5;
-  border-top: 16px solid $orange;
+  border: 10px dotted #ececec;
+  border-style: solid solid dotted dotted;
+  //   border-top: 16px dotted #e5e5e5;
   border-radius: 50%;
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   z-index: 101;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  animation: spin 2s linear infinite;
+  animation: spin 1.5s ease-in-out infinite;
   box-sizing: border-box;
 }
 
@@ -21,5 +22,30 @@
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.spinner::after {
+  content: "";
+  position: fixed;
+  border: 6px dotted $orange;
+  border-style: solid solid dotted;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  z-index: 101;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: backspin 0.75s linear infinite;
+  box-sizing: border-box;
+}
+
+@keyframes backspin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
