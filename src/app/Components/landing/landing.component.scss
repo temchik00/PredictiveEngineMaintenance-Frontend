@@ -5,12 +5,20 @@
 }
 
 .content-container {
-  display: flex;
-  padding: 20px;
   box-sizing: border-box;
+  padding: 20px;
   background-color: #f5f6f7;
   border: 1px solid #e9ebec;
   border-radius: 5px;
+}
+
+.title {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  box-sizing: border-box;
 }
 
 .vertical-line {

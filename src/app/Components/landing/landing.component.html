@@ -1,51 +1,54 @@
 <div class="main-container">
   <div class="content-container">
-    <div class="left-side">
-      <div class="input-group">
-        <div class="label">Идентификатор двигателя</div>
-        <input
-          type="number"
-          class="regular-input"
-          placeholder="Id двигателя"
-          [(ngModel)]="engineId"
-          min="1"
-        />
-      </div>
-      <button
-        class="apply-button"
-        (click)="open()"
-        [disabled]="!engineId || engineId.length < 1 || +engineId < 1"
-      >
-        Открыть
-      </button>
-      <div class="horizontal-line"></div>
-      <button class="apply-button create-button">Создать новый</button>
-    </div>
-    <div class="vertical-line"></div>
-    <div class="right-side">
-      <div class="dropzone">
-        <input
-          type="file"
-          id="fileinput"
-          accept=".csv,.txt"
-          (change)="dropFile($event)"
-        />
-        <div class="dropzone-text">
-          Перетащите файл в формате .csv в это поле или нажмите, чтобы выбрать
-          вручную.
+    <div class="title">Предиктивное обслуживание</div>
+    <div class="flex-container">
+      <div class="left-side">
+        <div class="input-group">
+          <div class="label">Идентификатор двигателя</div>
+          <input
+            type="number"
+            class="regular-input"
+            placeholder="Id двигателя"
+            [(ngModel)]="engineId"
+            min="1"
+          />
         </div>
+        <button
+          class="apply-button"
+          (click)="open()"
+          [disabled]="!engineId || engineId.length < 1 || +engineId < 1"
+        >
+          Открыть
+        </button>
+        <div class="horizontal-line"></div>
+        <button class="apply-button create-button">Создать новый</button>
       </div>
-      <div class="checkbox-container">
-        <input type="checkbox" id="checkbox" [(ngModel)]="forTesting" />
-        <label for="checkbox" class="label noselect">Тестовые данные</label>
+      <div class="vertical-line"></div>
+      <div class="right-side">
+        <div class="dropzone">
+          <input
+            type="file"
+            id="fileinput"
+            accept=".csv,.txt"
+            (change)="dropFile($event)"
+          />
+          <div class="dropzone-text">
+            Перетащите файл в формате .csv в это поле или нажмите, чтобы выбрать
+            вручную.
+          </div>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="checkbox" [(ngModel)]="forTesting" />
+          <label for="checkbox" class="label noselect">Тестовые данные</label>
+        </div>
+        <button
+          class="apply-button load-button"
+          [disabled]="selectedFile === undefined"
+          (click)="uploadFile()"
+        >
+          Загрузить из CSV
+        </button>
       </div>
-      <button
-        class="apply-button load-button"
-        [disabled]="selectedFile === undefined"
-        (click)="uploadFile()"
-      >
-        Загрузить из CSV
-      </button>
     </div>
   </div>
 </div>
