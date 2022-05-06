@@ -1,0 +1,22 @@
+.modal-body {
+  position: fixed;
+  border-radius: 10px;
+  background-color: #f5f6f7;
+  //   border: 1px solid #e9ebec;
+  //   width: 130px;
+  //   height: 130px;
+  z-index: 101;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 25px;
+}
+
+.text {
+  margin-bottom: 10px;
+}
+
+.modal-background {
+  cursor: pointer;
+}

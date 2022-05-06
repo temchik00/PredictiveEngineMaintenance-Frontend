@@ -1,0 +1,25 @@
+@import "../../Shared/variables.scss";
+
+.spinner {
+  position: fixed;
+  border: 16px solid #e5e5e5;
+  border-top: 16px solid $orange;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  z-index: 101;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 2s linear infinite;
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
