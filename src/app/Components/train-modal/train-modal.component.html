@@ -1,0 +1,50 @@
+<div class="modal-main-container" *ngIf="visible">
+  <div class="modal-body">
+    <div class="input-group">
+      <div class="label">Количество эпох при обучении</div>
+      <input
+        min="1"
+        type="number"
+        class="regular-input"
+        placeholder="Эпохи"
+        [(ngModel)]="epochs"
+      />
+    </div>
+    <div class="input-group">
+      <div class="label">Размер батча</div>
+      <input
+        min="1"
+        type="number"
+        class="regular-input"
+        placeholder="Батч"
+        [(ngModel)]="batchSize"
+      />
+    </div>
+    <div class="input-group">
+      <div class="label">Скорость обучения</div>
+      <input
+        min="0.000001"
+        max="1"
+        type="number"
+        class="regular-input"
+        placeholder="Скорость"
+        [(ngModel)]="learningRate"
+      />
+    </div>
+    <div class="input-group">
+      <div class="label">Коэффициент исключения</div>
+      <input
+        min="0.01"
+        max="1"
+        type="number"
+        class="regular-input"
+        placeholder="Коэффициент"
+        [(ngModel)]="dropout"
+      />
+    </div>
+    <button class="apply-button" [disabled]="isDisabled()" (click)="train()">
+      Обучить
+    </button>
+  </div>
+  <div class="modal-background" (click)="close()"></div>
+</div>

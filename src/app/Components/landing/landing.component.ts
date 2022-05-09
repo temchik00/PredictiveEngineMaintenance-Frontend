@@ -65,8 +65,7 @@ export class LandingComponent implements OnInit {
       });
   }
 
-  public dropFile(event: any): void {
-    let file: File | undefined = event.target.files[0];
+  public dropFile(file: File | undefined): void {
     this.selectedFile = file;
   }
 

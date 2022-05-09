@@ -1,0 +1,38 @@
+@import "../../Shared/variables.scss";
+
+.main-container {
+  align-items: center;
+}
+
+.content-container {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #f5f6f7;
+  border: 1px solid #e9ebec;
+  border-radius: 5px;
+}
+
+.title {
+  text-align: center;
+}
+
+.middle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-line {
+  margin: 0 15px;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  justify-content: center;
+}
+
+.horizontal-line {
+  margin: 15px 0;
+}

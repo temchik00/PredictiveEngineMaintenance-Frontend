@@ -1,1 +1,34 @@
-<p>engine works!</p>
+<div class="main-container">
+  <div class="content-container">
+    <div class="title">Двигатель {{ engine.id }}</div>
+    <div class="middle-container">
+      <div class="left-side">
+        <button class="apply-button" (click)="addCycle()">Добавить цикл</button>
+        <button class="apply-button" (click)="getExpectedLifetime()">
+          Узнать оставшиеся циклы
+        </button>
+        <button class="apply-button" (click)="trainModel()">
+          Обучить модель
+        </button>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="right-side">
+        <app-dropzone (fileChanged)="dropFile($event)"></app-dropzone>
+        <button
+          class="apply-button"
+          [disabled]="file == undefined"
+          (click)="uploadCycles()"
+        >
+          Загрузить циклы
+        </button>
+      </div>
+    </div>
+    <div class="horizontal-line" *ngIf="cycles"></div>
+    <echarts [options]="options" [initOpts]="initOpts" *ngIf="cycles"></echarts>
+  </div>
+</div>
+<app-add-cycle-modal
+  [(visible)]="addCycleModalVisible"
+  (addedCycle)="getHistory()"
+></app-add-cycle-modal>
+<app-train-modal [(visible)]="trainModalVisible"></app-train-modal>

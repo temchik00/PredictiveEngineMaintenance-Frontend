@@ -1,0 +1,34 @@
+<div class="modal-main-container" *ngIf="visible">
+  <div class="modal-body">
+    <div class="input-group">
+      <div class="label">
+        Настройки двигателя (укажите через пробел 3 значения)
+      </div>
+      <input
+        type="text"
+        class="regular-input"
+        placeholder="Настройки"
+        [(ngModel)]="settings"
+      />
+    </div>
+    <div class="input-group">
+      <div class="label">
+        Показатели сенсоров (укажите через пробел 21 значениe)
+      </div>
+      <input
+        type="text"
+        class="regular-input"
+        placeholder="Сенсоры"
+        [(ngModel)]="sensors"
+      />
+    </div>
+    <div class="checkbox-container">
+      <input type="checkbox" id="checkbox" [(ngModel)]="hasFailed" />
+      <label for="checkbox" class="label noselect">Произошла неполадка</label>
+    </div>
+    <button class="apply-button" [disabled]="isDisabled()" (click)="addCycle()">
+      Добавить цикл
+    </button>
+  </div>
+  <div class="modal-background" (click)="close()"></div>
+</div>

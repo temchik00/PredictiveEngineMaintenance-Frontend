@@ -21,22 +21,13 @@
           Открыть
         </button>
         <div class="horizontal-line"></div>
-        <button class="apply-button create-button">Создать новый</button>
+        <button class="apply-button create-button" (click)="create()">
+          Создать новый
+        </button>
       </div>
       <div class="vertical-line"></div>
       <div class="right-side">
-        <div class="dropzone">
-          <input
-            type="file"
-            id="fileinput"
-            accept=".csv,.txt"
-            (change)="dropFile($event)"
-          />
-          <div class="dropzone-text">
-            Перетащите файл в формате .csv в это поле или нажмите, чтобы выбрать
-            вручную.
-          </div>
-        </div>
+        <app-dropzone (fileChanged)="dropFile($event)"></app-dropzone>
         <div class="checkbox-container">
           <input type="checkbox" id="checkbox" [(ngModel)]="forTesting" />
           <label for="checkbox" class="label noselect">Тестовые данные</label>

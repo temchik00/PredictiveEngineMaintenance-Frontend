@@ -8,6 +8,9 @@
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
 }
 
 .text {
@@ -16,4 +19,8 @@
 
 .modal-background {
   cursor: pointer;
+}
+
+.regular-input {
+  width: 100%;
 }

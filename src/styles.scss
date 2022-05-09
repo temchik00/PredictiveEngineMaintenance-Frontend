@@ -49,7 +49,7 @@ textarea {
   border: none;
   outline: none;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 10px;
   font-size: 1.1rem;
   border-radius: 7px;
 }
@@ -92,6 +92,7 @@ textarea {
   padding: 5px 10px;
   font-size: 1.2rem;
   outline: none;
+  box-sizing: border-box;
 }
 
 .modal-main-container {
@@ -137,4 +138,14 @@ textarea {
 input[type="checkbox"],
 label {
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  input[type="checkbox"] {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
 }
