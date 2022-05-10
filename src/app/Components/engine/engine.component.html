@@ -7,9 +7,6 @@
         <button class="apply-button" (click)="getExpectedLifetime()">
           Узнать оставшиеся циклы
         </button>
-        <button class="apply-button" (click)="trainModel()">
-          Обучить модель
-        </button>
       </div>
       <div class="vertical-line"></div>
       <div class="right-side">
@@ -31,4 +28,3 @@
   [(visible)]="addCycleModalVisible"
   (addedCycle)="getHistory()"
 ></app-add-cycle-modal>
-<app-train-modal [(visible)]="trainModalVisible"></app-train-modal>

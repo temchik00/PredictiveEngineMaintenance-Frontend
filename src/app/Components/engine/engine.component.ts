@@ -20,7 +20,6 @@ export class EngineComponent implements OnInit {
   public predictedCycles: Array<number> | undefined = undefined;
 
   public addCycleModalVisible: boolean = false;
-  public trainModalVisible: boolean = false;
   constructor(
     private router: Router,
     private engineService: EngineService,
@@ -150,9 +149,5 @@ export class EngineComponent implements OnInit {
 
   public addCycle(): void {
     this.addCycleModalVisible = true;
-  }
-
-  public trainModel(): void {
-    this.trainModalVisible = true;
   }
 }

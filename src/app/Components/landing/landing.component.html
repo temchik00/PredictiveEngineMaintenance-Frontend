@@ -41,5 +41,8 @@
         </button>
       </div>
     </div>
+    <div class="horizontal-line"></div>
+    <button class="apply-button" (click)="train()">Обучить модель</button>
   </div>
 </div>
+<app-train-modal [(visible)]="trainModalVisible"></app-train-modal>

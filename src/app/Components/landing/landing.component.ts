@@ -14,6 +14,7 @@ export class LandingComponent implements OnInit {
   public engineId: string = '';
   public selectedFile: File | undefined = undefined;
   public forTesting: boolean = false;
+  public trainModalVisible: boolean = false;
 
   constructor(
     private engineService: EngineService,
@@ -86,5 +87,9 @@ export class LandingComponent implements OnInit {
     } else {
       this.stateModal.fail('Файл не выбран');
     }
+  }
+
+  public train(): void {
+    this.trainModalVisible = true;
   }
 }
