@@ -3,4 +3,4 @@ version: "3.9"
 services:
   frontend:
     ports:
-      - 4200:85
+      - 4205:80
