@@ -6,7 +6,10 @@
     (change)="dropFile($event)"
   />
   <div class="dropzone-text">
-    Перетащите файл в формате .csv в это поле или нажмите, чтобы выбрать
-    вручную.
+    {{
+      selectedFile == undefined
+        ? "Перетащите файл в формате .csv в это поле или нажмите, чтобы выбрать вручную."
+        : "Выбран файл " + selectedFile.name
+    }}
   </div>
 </div>

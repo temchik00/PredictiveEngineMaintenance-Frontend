@@ -6,7 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./dropzone.component.scss'],
 })
 export class DropzoneComponent implements OnInit {
-  private selectedFile: File | undefined = undefined;
+  public selectedFile: File | undefined = undefined;
 
   @Output() fileChanged: EventEmitter<File | undefined> = new EventEmitter<
     File | undefined
